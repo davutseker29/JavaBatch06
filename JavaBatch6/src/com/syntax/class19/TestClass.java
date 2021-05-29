@@ -32,6 +32,14 @@ public class TestClass {
 		animal.sleep();
 		animal.eat();
 		animal.beWild();
+		
+		System.out.println("============Cat============");
+		Cat cat=new Cat();
+		cat.play();
+		cat.bigEyes=true;
+		cat.color="white and black";
+		
+		
 
 	}
 }

@@ -3,15 +3,18 @@ package com.syntax.class20;
 public class Doctor {
 	int doctorId;
 	String name;
+	
+	Doctor(int doctorId,String name){
+		
+		this.doctorId=doctorId;
+		this.name=name;
+	}
 }
 
 class Dentist extends Doctor {
 
-	String cert;
-
-	Dentist(String name, int doctorId, String cert) {
-		super.name = name;
-		super.doctorId = doctorId;
-		this.cert = cert;
+	Dentist(int doctorId,String name){
+		super(doctorId, name);
 	}
+	
 }

@@ -11,6 +11,9 @@ public class DrivableTest {
 		Cars car=new Cars();
 		car.drive();
 		car.stop();
+		
+		Vehicles veh=new Cars();
+		veh.stop();
 
 	}
 }

@@ -8,6 +8,7 @@ public class StudentTest {
 		student.study();
 		student.doHomework();
 		
+		
 		System.out.println("---- SyntaxStudent Object and  Reference SyntaxStudent Type");
 		SyntaxStudent syntax=new SyntaxStudent();
 		syntax.doHomework();
@@ -19,7 +20,15 @@ public class StudentTest {
 		Student st=new SyntaxStudent();
 		st.study();
 		st.doHomework();
+		
 
 		//SyntaxStudent st1=new Student();
+		
+		System.out.println("---- CollegeStudent Object and  Reference CollegeStudent Type");
+		CollegeStudent cs=new CollegeStudent();
+		cs.attend();
+		cs.parentClass();
+		cs.study();
+		
 	}
 }

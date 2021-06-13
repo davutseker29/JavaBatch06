@@ -36,6 +36,11 @@ class CollegeStudent extends Student {
 	void attend() {
 		System.out.println("Students attend school ceremonies");
 	}
+	
+	void parentClass() {
+		super.doHomework();
+	
+	}
 }
 
 class SchoolStudent extends Student {

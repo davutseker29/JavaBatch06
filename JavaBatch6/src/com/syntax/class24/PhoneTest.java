@@ -11,7 +11,7 @@ public class PhoneTest {
 		iphone.text();
 		iphone.takePicture();
 		iphone.playMusic();
-		
+		System.out.println("===============");
 		Phone samsung=new Samsung();
 		samsung.call();
 		samsung.text();

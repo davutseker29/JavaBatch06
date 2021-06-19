@@ -9,20 +9,18 @@ public class HW2 {
 
 		ArrayList<Integer> nums = new ArrayList<>();
 
-		for (int x = 0; x <= 50; x += 2) {
-			nums.add(x);
+		for (int i = 0; i <= 50; i += 2) {
+			nums.add(i);
 		}
-
 		System.out.println(nums);
-
-		Iterator<Integer> n = nums.iterator();
 		
-		while (n.hasNext()) {
-			if (n.next() % 5 == 0) {
-				n.remove();
+		Iterator<Integer> num=nums.iterator();
+		while(num.hasNext()) {
+			if(num.next() % 5==0) {
+				num.remove();
 			}
+			
 		}
-		
 		System.out.println(nums);
 	}
 

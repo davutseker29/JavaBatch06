@@ -17,37 +17,43 @@ public class LinkedListDemo {
 		llist.add("Farid");
 		llist.add("Farid");
 
-		int size = llist.size();
-		System.out.println(size);
-
-		// get all elements 1 by 1 in 3 different ways
-		for (int x = 0; x < llist.size(); x++) {
-			System.out.println(llist.get(x));
+		System.out.println(llist.size());
+		
+		//1st way
+		
+		for (int i = 0; i < llist.size(); i++) {
+			String lst=llist.get(i);
+			System.out.println(lst);	
 		}
-
-		for (String a : llist) {
-			System.out.println(a);
-		}
-
-		Iterator<String> it = llist.iterator();
-		while (it.hasNext()) {
-			String str = it.next();
+		
+		//2nd way
+		System.out.println("=======2nd way======");
+		for (String str : llist) {
 			System.out.println(str);
-		}
-		
-		//can we store objects of user defined classes?
-		List<Food> food=new LinkedList<>();
-		food.add(new Salad("salad", "tomato and cucumber", 100));
-		food.add(new Dessert("desert", "chocolate", 1000));
-		food.add(new MainDish("pasta", "mushrooms", 800));
-		food.add(new MainDish("pasta", "mushrooms", 800));
-		
-		for(Food f:food) {
-			f.calories();
-			f.foodType();
-			f.ingredient();
 			
-			System.out.println("---------------");
 		}
+		
+		//3rd way
+		System.out.println("======3rd way======");
+		Iterator<String> ist=llist.iterator();
+		while (ist.hasNext()) {
+			String ista =ist.next();
+			System.out.println(ista);
+		}
+		
+//		//can we store objects of user defined classes?
+//		List<Food> food=new LinkedList<>();
+//		food.add(new Salad("salad", "tomato and cucumber", 100));
+//		food.add(new Dessert("desert", "chocolate", 1000));
+//		food.add(new MainDish("pasta", "mushrooms", 800));
+//		food.add(new MainDish("pasta", "mushrooms", 800));
+//		
+//		for(Food f:food) {
+//			f.calories();
+//			f.foodType();
+//			f.ingredient();
+//			
+//			System.out.println("---------------");
+//		}
 	}
 }

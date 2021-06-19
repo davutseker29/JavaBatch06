@@ -1,6 +1,7 @@
 package com.syntax.class28;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class HW1 {
 
@@ -16,6 +17,15 @@ public class HW1 {
 			if (drinks.get(i).contains("e") || drinks.get(i).contains("a")) {
 				drinks.set(i, "water");
 			}
+		}
+		System.out.println("=======i am here======");
+		Iterator<String> drnk=drinks.iterator();
+		while(drnk.hasNext()) {
+			String drn = drnk.next();
+			if(drn.contains("a")) {
+				drnk.remove();
+			}
+			System.out.println(drn);
 		}
 
 		System.out.print(drinks);

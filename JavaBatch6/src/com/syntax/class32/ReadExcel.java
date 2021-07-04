@@ -11,14 +11,14 @@ public class ReadExcel {
 
 	public static void main(String[] args) throws IOException {
 
-		String filePath = "/Users/syntax/Documents/Test.xlsx";
-		String filePath1 = System.getProperty("user.dir") + "/testdata/Test.xlsx";
+		String filePath = "C:\\Users\\User\\eclipse-workspace\\JavaBatch6\\testdata\\Test.xlsx";
+//		String filePath1 = System.getProperty("user.dir") + "/testdata/Test.xlsx";
 
 		FileInputStream fis = new FileInputStream(filePath);
 
 		// get an Object of Workbook type
 		Workbook book = new XSSFWorkbook(fis);
-		Sheet sheet = book.getSheet("Sheet1");
+		Sheet sheet = book.getSheet("Sheet4");
 
 		// need to find numbers or rows
 		int rows = sheet.getPhysicalNumberOfRows();

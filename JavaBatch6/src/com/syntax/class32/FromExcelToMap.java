@@ -20,7 +20,7 @@ public class FromExcelToMap {
 		FileInputStream fis = new FileInputStream(filePath);
 
 		Workbook book = new XSSFWorkbook(fis);
-		Sheet sheet = book.getSheet("Sheet1");
+		Sheet sheet = book.getSheet("Sheet4");
 		
 		int rows=sheet.getPhysicalNumberOfRows();
 		int cols =sheet.getRow(0).getLastCellNum();

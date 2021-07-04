@@ -36,6 +36,7 @@ public class HandlingException {
 		
 		}catch (ArithmeticException ae) {
 			System.out.println("Cathed ArithmeticException Exception");
+			System.out.println(ae.getStackTrace());
 		}
 
 		System.out.println("End of the program");

@@ -14,10 +14,9 @@ public class FinallyBlock {
 
 		} catch (Exception e) {
 			System.out.println("I am a catch block");
-		} finally {//always gets executed
+		} finally {// always gets executed
 			System.out.println("I am a finally block");
 		}
-		
-		
+
 	}
 }

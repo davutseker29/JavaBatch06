@@ -9,28 +9,24 @@ import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
-public class WriteToExcel {
+public class WritingToXL {
 
 	public static void main(String[] args) throws IOException {
-		
-		String filePath=System.getProperty("user.dir")+"/testdata/AnotherFile.xlsx";
+
+		String filePath=System.getProperty("user.dir")+"\\testdata\\AnotherFile.xlsx";
+		System.out.println(filePath);
 		
 		FileInputStream fis=new FileInputStream(filePath);
 		
-		Workbook book=new XSSFWorkbook(fis);
+		Workbook wbook=new XSSFWorkbook(fis);
+		Sheet sheet=wbook.getSheet("Sheet1");
 		
-		//writing into existing sheet
-		Sheet sheet1=book.getSheet("Sheet1");
+		sheet.createRow(0).createCell(0).setCellValue("name");
+		sheet.createRow(1).createCell(0).setCellValue("ziya");
 		
-		sheet1.getRow(0).createCell(5).setCellValue("Country");
-		
-		sheet1.createRow(3).createCell(0).setCellValue("Hichem");
-		
-		Sheet customSheet=book.createSheet("TestSheet");
-		
+		Sheet createdSheet = wbook.createSheet("TestSheet");
 		FileOutputStream fos=new FileOutputStream(filePath);
-		
-		book.write(fos);
-
+		wbook.write(fos);
 	}
+
 }

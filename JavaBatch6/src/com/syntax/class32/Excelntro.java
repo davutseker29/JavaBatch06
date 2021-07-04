@@ -14,12 +14,12 @@ public class Excelntro {
 
 	public static void main(String[] args) throws IOException {
 		
-		String filePath="/Users/syntax/Documents/Test.xlsx";
+		String filePath="C:\\Users\\User\\Desktop\\Test.xlsx";
 		FileInputStream fis=new FileInputStream(filePath);
 		//accessing workbook
 		Workbook wbook=new XSSFWorkbook(fis);
 		//accessing sheet
-		Sheet sheet=wbook.getSheet("Sheet1");
+		Sheet sheet=wbook.getSheet("Sheet4");
 		//accessing row
 		Row row1=sheet.getRow(0);
 		//accessing cell
